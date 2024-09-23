@@ -1,0 +1,96 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A pyramid plot showing births and deaths in Australian states based on the selected year.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhuy0014/DataVis2Draft/refs/heads/main/data/merged_births_deaths.csv",
+    "format": {"type": "csv"}
+  },
+  "params": [
+    {
+      "name": "Year",
+      "value": 2022,
+      "bind": {"input": "select", "options": [2012, 2021, 2022]}
+    }
+  ],
+  "transform": [
+    {"filter": "datum.Year == Year"},
+    {"fold": ["Births", "Number of deaths"], "as": ["Category", "Value"]}
+  ],
+  "spacing": 0,
+  "hconcat": [
+    {
+      "transform": [{"filter": {"field": "Category", "equal": "Births"}}],
+      "title": "Births",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "State or territory",
+          "axis": null,
+          "sort": "descending"
+        },
+        "x": {
+          "aggregate": "sum",
+          "field": "Value",
+          "title": "Number of Births",
+          "axis": {"format": "s"},
+          "sort": "descending"
+        },
+        "color": {
+          "field": "Category",
+          "scale": {"range": ["#67a9cf", "#ef8a62"]},
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "State or territory",
+            "title": "State, region or territory"
+          },
+          {"field": "Value", "title": "Number of births"}
+        ]
+      }
+    },
+    {
+      "width": 20,
+      "view": {"stroke": null},
+      "mark": {"type": "text", "align": "center"},
+      "encoding": {
+        "y": {
+          "field": "State or territory",
+          "type": "ordinal",
+          "axis": null,
+          "sort": "descending"
+        },
+        "text": {"field": "State or territory", "type": "nominal"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": {"field": "Category", "equal": "Number of deaths"}}
+      ],
+      "title": "Deaths",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "State or territory",
+          "axis": null,
+          "sort": "descending"
+        },
+        "x": {
+          "aggregate": "sum",
+          "field": "Value",
+          "title": "Number of Deaths",
+          "axis": {"format": "s"}
+        },
+        "color": {"field": "Category", "legend": null},
+        "tooltip": [
+          {
+            "field": "State or territory",
+            "title": "State, region or territory"
+          },
+          {"field": "Value", "title": "Number of deaths"}
+        ]
+      }
+    }
+  ],
+  "config": {"view": {"stroke": null}, "axis": {"grid": false}}
+}

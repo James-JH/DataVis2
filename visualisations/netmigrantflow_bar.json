@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 400,
+  "height": {"step": 40},
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhuy0014/DataVis2Draft/refs/heads/main/data/NetOverseasMigrationCapital.csv",
+    "format": {"type": "csv"}
+  },
+  "encoding": {"y": {"field": "Capital city", "type": "nominal", "axis": null}},
+  "layer": [
+    {
+      "mark": {"type": "bar", "color": "orange"},
+      "encoding": {
+        "x": {
+          "aggregate": "sum",
+          "field": "Net overseas migration (Persons)",
+          "title": "Net overseas migration (Persons)"
+        },
+        "tooltip": [
+          {"field": "Capital city", "title": "Capital City"},
+          {
+            "field": "Net overseas migration (Persons)",
+            "title": "Net Migration"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "align": "left", "dx": 5},
+      "encoding": {
+        "x": {"aggregate": "sum", "field": "Net overseas migration (Persons)"},
+        "text": {"field": "Capital city"},
+        "color": {"value": "black"},
+        "tooltip": [
+          {"field": "Capital city", "title": "Capital City"},
+          {
+            "field": "Net overseas migration (Persons)",
+            "title": "Net Migration"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
