@@ -20,15 +20,19 @@
         <!-- Visualization Containers -->
         <div class="vis-container" id="vis1"></div>
         <div class="vis-container" id="vis2"></div>
+        <div class="vis-container" id="vis3"></div>
+        <div class="vis-container" id="vis4"></div>
 
         <footer>
-            <p>This visualisation is created by James H. Data source: ABS.</p>
+            <p>This visualisation is created by James H. Data source: Australian Bureau of Statistics (ABS).</p>
         </footer>
     </div>
 
     <script type="text/javascript">
-        const specVis1 = "./visualisations/birth_deaths_pyramidplot.json"; // Replace with your first JSON file name
-        const specVis2 = "./visualisations/median_age_capital_map.json"; // Replace with your second JSON file name
+        const specVis1 = "./visualisations/birth_deaths_pyramidplot.json"; 
+        const specVis2 = "./visualisations/median_age_capital_map.json";
+        const specVis3 = "./visualisations/netmigrantflow_bar.json"; 
+        const specVis4 = "./visualisations/topmigrantcountries_radial.json"; 
 
         vegaEmbed('#vis1', specVis1, { actions: false })
             .then(result => {
@@ -39,6 +43,18 @@
         vegaEmbed('#vis2', specVis2, { actions: false })
             .then(result => {
                 console.log('Visualization 2 successfully embedded.');
+            })
+            .catch(console.error);
+
+        vegaEmbed('#vis3', specVis3, { actions: false })
+            .then(result => {
+                console.log('Visualization 3 successfully embedded.');
+            })
+            .catch(console.error);
+
+        vegaEmbed('#vis4', specVis4, { actions: false })
+            .then(result => {
+                console.log('Visualization 4 successfully embedded.');
             })
             .catch(console.error);
     </script>
