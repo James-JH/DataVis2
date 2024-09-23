@@ -3,7 +3,8 @@
   "description": "A pyramid plot showing births and deaths in Australian states based on the selected year.",
   "data": {
     "url": "https://raw.githubusercontent.com/jhuy0014/DataVis2Draft/refs/heads/main/data/merged_births_deaths.csv",
-    "format": {"type": "csv"}
+    "format": {"type": "csv"},
+  "width": "container"
   },
   "params": [
     {
