@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A radial chart with the option to highlight either the top 3 or bottom 3 countries by population as well as control the year.",
-  "width": 400,
-  "height": 400,
+  "width": "container",
+  "height": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/jhuy0014/DataVis2Draft/refs/heads/main/data/TopCountriesBirth.csv",
     "format": {"type": "csv"}
