@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 400,
-  "height": {"step": 40},
+  "width": "container",
+  "height": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/jhuy0014/DataVis2Draft/refs/heads/main/data/NetOverseasMigrationCapital.csv",
     "format": {"type": "csv"}
