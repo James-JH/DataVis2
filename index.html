@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Demographic Insights in Australia</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+
+    <div class="page">
+        <h1>Exploring Demographic Insights in Australia</h1>
+        <p>We will be exploring demographic insights in Australia.</p>
+
+        <!-- Visualization Containers -->
+        <div class="vis-container" id="vis1"></div>
+        <div class="vis-container" id="vis2"></div>
+
+        <footer>
+            <p>This visualisation is created by James H. Data source: ABS.</p>
+        </footer>
+    </div>
+
+    <script type="text/javascript">
+        const specVis1 = "./visualisations/birth_deaths_pyramidplot.json"; // Replace with your first JSON file name
+        const specVis2 = "./visualisations/median_age_capital_map.json"; // Replace with your second JSON file name
+
+        vegaEmbed('#vis1', specVis1, { actions: false })
+            .then(result => {
+                console.log('Visualization 1 successfully embedded.');
+            })
+            .catch(console.error);
+
+        vegaEmbed('#vis2', specVis2, { actions: false })
+            .then(result => {
+                console.log('Visualization 2 successfully embedded.');
+            })
+            .catch(console.error);
+    </script>
+</body>
+
+</html>
