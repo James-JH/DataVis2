@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "autosize": { "type": "fit", "contains": "padding" },
+  "width": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/jhuy0014/DataVis2Draft/refs/heads/main/data/NetOverseasMigrationCapital.csv",
     "format": {"type": "csv"}
