@@ -13,8 +13,8 @@ h1 {
   width: 750px;
   background-color: white;
   margin: auto;
-  padding: 55px;
-  padding-top: 35px;
+  padding: 40px;
+  padding-top: 30px;
 }
 
 .vis-container {
@@ -27,15 +27,15 @@ h1 {
 }
 
 .description-right {
-  padding-left: 20px;
+  padding-left: 15px;
 }
 
 .description-left {
-  padding-right: 20px;
+  padding-right: 15px;
 }
 
 .pure-g {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .small-font {
@@ -44,7 +44,7 @@ h1 {
 
 footer {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 0.9em;
     color: #666;
 }
