@@ -33,7 +33,7 @@
       "sort": [{"field": "Population", "order": "descending"}]
     },
     {
-      "calculate": "TopOrBottom == 'Top 3' ? datum.rank <= 3 : datum.rank >= (datum['Population'].length)",
+      "calculate": "TopOrBottom == 'Top 3' ? datum.rank <= 3 : datum.rank >= (datum['Population'].length - 2)",
       "as": "highlight"
     }
   ],
