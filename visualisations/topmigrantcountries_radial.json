@@ -27,13 +27,18 @@
     }
   ],
   "transform": [
-    {"filter": "datum.Year == Year"},
     {
-      "window": [{"op": "rank", "as": "rank"}],
+      "filter": "datum.Year == Year"
+    },
+    {
+      "window": [
+        {"op": "rank", "as": "rank"},
+        {"op": "count", "as": "total_count"}  // Calculate total number of rows
+      ],
       "sort": [{"field": "Population", "order": "descending"}]
     },
     {
-      "calculate": "TopOrBottom == 'Top 3' ? datum.rank <= 3 : datum.rank >= (datum['Population'].length - 2)",
+      "calculate": "TopOrBottom == 'Top 3' ? datum.rank <= 3 : datum.rank >= (datum.total_count - 2)",
       "as": "highlight"
     }
   ],
