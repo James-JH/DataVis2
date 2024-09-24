@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A radial chart showing the population of countries with alternating colors and a control to select the year.",
+  "description": "A radial chart showing the population of countries with alternating colours and a control to select the year.",
   "width": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/jhuy0014/DataVis2Draft/refs/heads/main/data/TopCountriesBirth.csv",
@@ -29,7 +29,7 @@
   ],
   "layer": [
     {
-      "mark": {"type": "arc", "innerRadius": 0, "stroke": "#fff"},
+      "mark": {"type": "arc", "innerRadius": 20, "stroke": "#fff"},
       "encoding": {
         "color": {
           "condition": {
