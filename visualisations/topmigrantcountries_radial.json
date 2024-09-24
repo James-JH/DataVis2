@@ -52,7 +52,6 @@
     },
     "color": {
       "field": "Country",
-      "scale": {"range": ["lightskyblue", "#ef8a62"]},
       "legend": null
     }
   },
