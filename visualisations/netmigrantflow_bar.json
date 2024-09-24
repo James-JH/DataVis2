@@ -8,7 +8,7 @@
   "encoding": {"y": {"field": "Capital city", "type": "nominal", "axis": null}},
   "layer": [
     {
-      "mark": {"type": "bar", "color": "orange"},
+      "mark": {"type": "bar", "color": "#67a9cf"},
       "encoding": {
         "x": {
           "aggregate": "sum",
