@@ -25,12 +25,11 @@
       "window": [
         {"op": "rank", "as": "rank"}
       ],
-      "sort": [{"field": "Population", "order": "descending"}]
     }
   ],
   "layer": [
     {
-      "mark": {"type": "arc", "innerRadius": 20, "stroke": "#fff"},
+      "mark": {"type": "arc", "innerRadius": 0, "stroke": "#fff"},
       "encoding": {
         "color": {
           "condition": {
@@ -57,10 +56,10 @@
     }
   ],
   "encoding": {
-    "theta": {"field": "Population", "type": "quantitative", "stack": true},
+    "theta": {"field": "Country", "type": "nominal", "stack": true},
     "radius": {
       "field": "Population",
-      "scale": {"type": "linear", "zero": false, "rangeMin": 20}
+      "scale": {"type": "sqrt", "zero": false, "rangeMin": 15}
     }
   },
   "config": {}
