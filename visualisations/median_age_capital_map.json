@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 400,
+  "height": 300,
   "layer": [
     {
       "data": {
@@ -25,11 +25,22 @@
       "encoding": {
         "longitude": {"field": "lng", "type": "quantitative"},
         "latitude": {"field": "lat", "type": "quantitative"},
-        "size": {"field": "Median age (years)", "type": "quantitative"},
-        "color": {
+        "size": {
+            "field": "Median age (years)",
+            "type": "quantitative",
+            "scale": {"scheme": "blues",
+              "domain": [28, 40]
+              }
+            },
+          "color": {
           "field": "Median age (years)",
           "type": "quantitative",
-          "scale": {"scheme": "blues"}
+          "scale": {"scheme": "blues",
+            "domain": [34, 40]
+            },
+          "legend": {
+            "title": "Median Age",
+            "orient": "right" }
         },
         "tooltip": [
           {"field": "Capital city", "type": "nominal"},
