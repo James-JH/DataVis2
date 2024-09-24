@@ -73,7 +73,7 @@
       "condition": {
         "test": "datum.highlight",
         "field": "Country",
-        "scale": {"range": ["blue", "orange"]},
+        "scale": {"range": ["#67a9cf", "#ef8a62"]},
         "legend": null
       },
       "value": "lightgray"
