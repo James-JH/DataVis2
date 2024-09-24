@@ -33,7 +33,7 @@
     {
       "window": [
         {"op": "rank", "as": "rank"},
-        {"op": "count", "as": "total_count"}  // Calculate total number of rows
+        {"op": "count", "as": "total_count"}  
       ],
       "sort": [{"field": "Population", "order": "descending"}]
     },
