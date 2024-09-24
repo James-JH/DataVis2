@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A radial chart with the option to highlight either the top 3 or bottom 3 countries by population as well as control the year.",
+  "description": "A radial chart that highlights the top 3 countries by population, with a control to select the year.",
   "width": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/jhuy0014/DataVis2Draft/refs/heads/main/data/TopCountriesBirth.csv",
@@ -15,15 +15,6 @@
         "options": [2010, 2015, 2020],
         "name": "Select Year: "
       }
-    },
-    {
-      "name": "TopOrBottom",
-      "value": "Top 3",
-      "bind": {
-        "input": "select",
-        "options": ["Top 3", "Bottom 3"],
-        "name": "Highlight: "
-      }
     }
   ],
   "transform": [
@@ -32,13 +23,12 @@
     },
     {
       "window": [
-        {"op": "rank", "as": "rank"},
-        {"op": "count", "as": "total_count"}  
+        {"op": "rank", "as": "rank"}
       ],
       "sort": [{"field": "Population", "order": "descending"}]
     },
     {
-      "calculate": "TopOrBottom == 'Top 3' ? datum.rank <= 3 : datum.rank >= (datum.total_count - 2)",
+      "calculate": "datum.rank <= 3",
       "as": "highlight"
     }
   ],
