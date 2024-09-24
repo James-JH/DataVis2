@@ -34,7 +34,11 @@
   },{
     "mark": {"type": "text", "radiusOffset": 30},
     "encoding": {
-      "text": {"field": "Country", "type": "nominal"}
+      "text": {"field": "Country", "type": "nominal"},
+      "tooltip": [
+          {"field": "Country", "title": "Country of Birth"},
+          {"field": "Population", "title": "Population"}
+        ]
     }
   }],
   "encoding": {
