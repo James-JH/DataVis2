@@ -1,8 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "A radial chart with the option to highlight either the top 3 or bottom 3 countries by population as well as control the year.",
-  "width": 400,
-  "height": 400,
+  "width": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/jhuy0014/DataVis2Draft/refs/heads/main/data/TopCountriesBirth.csv",
     "format": {"type": "csv"}
@@ -16,26 +15,12 @@
         "options": [2010, 2015, 2020],
         "name": "Select Year: "
       }
-    },
-    {
-      "name": "TopOrBottom",
-      "value": "Top 3",
-      "bind": {
-        "input": "select",
-        "options": ["Top 3", "Bottom 3"],
-        "name": "Highlight: "
-      }
     }
   ],
   "transform": [
     {"filter": "datum.Year == Year"},
     {
-      "window": [{"op": "rank", "as": "rank"}],
-      "sort": [{"field": "Population", "order": "descending"}]
-    },
-    {
-      "calculate": "TopOrBottom == 'Top 3' ? datum.rank <= 3 : datum.rank >= (datum['Population'].length)",
-      "as": "highlight"
+      "window": [{"op": "rank", "as": "rank"}]
     }
   ],
   "layer": [
@@ -60,20 +45,15 @@
     }
   ],
   "encoding": {
-    "theta": {"field": "Population", "type": "quantitative", "stack": true},
+    "theta": {"field": "Country", "type": "nominal", "stack": true},
     "radius": {
       "field": "Population",
-      "scale": {"type": "linear", "zero": false, "rangeMin": 20}
+      "scale": {"type": "sqrt", "zero": false, "rangeMin": 20}
     },
     "color": {
-      "condition": {
-        "test": "datum.highlight",
-        "field": "Country",
-        "scale": {"range": ["blue", "orange"]},
-        "legend": null
-      },
-      "value": "lightgray"
+      "field": "Country",
+      "scale": {"range": ["lightskyblue", "#ef8a62"]},
+      "legend": null
     }
   },
-  "config": {}
 }
