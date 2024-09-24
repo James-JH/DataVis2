@@ -10,7 +10,7 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "lightgray",
+        "fill": "lightskyblue",
         "stroke": "white",
         "strokeWidth": 1
       },
@@ -35,7 +35,7 @@
           "color": {
           "field": "Median age (years)",
           "type": "quantitative",
-          "scale": {"scheme": "blues",
+          "scale": {"scheme": "lightgreyred",
             "domain": [34, 40]
             },
           "legend": {
