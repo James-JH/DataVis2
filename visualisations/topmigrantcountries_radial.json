@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A radial chart that highlights the top 3 countries by population, with a control to select the year.",
+  "description": "A radial chart showing the population of countries with alternating colors and a control to select the year.",
   "width": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/jhuy0014/DataVis2Draft/refs/heads/main/data/TopCountriesBirth.csv",
@@ -26,16 +26,19 @@
         {"op": "rank", "as": "rank"}
       ],
       "sort": [{"field": "Population", "order": "descending"}]
-    },
-    {
-      "calculate": "datum.rank <= 3",
-      "as": "highlight"
     }
   ],
   "layer": [
     {
       "mark": {"type": "arc", "innerRadius": 20, "stroke": "#fff"},
       "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.rank % 2 == 0",
+            "value": "lightskyblue"
+          },
+          "value": "#ef8a62"
+        },
         "tooltip": [
           {"field": "Country", "title": "Country of Birth"},
           {"field": "Population", "title": "Population"}
@@ -43,7 +46,7 @@
       }
     },
     {
-      "mark": {"type": "text", "radiusOffset": 35},
+      "mark": {"type": "text", "radiusOffset": 40},
       "encoding": {
         "text": {"field": "Country", "type": "nominal"},
         "tooltip": [
@@ -58,15 +61,6 @@
     "radius": {
       "field": "Population",
       "scale": {"type": "linear", "zero": false, "rangeMin": 20}
-    },
-    "color": {
-      "condition": {
-        "test": "datum.highlight",
-        "field": "Country",
-        "scale": {"range": ["#67a9cf", "#ef8a62"]},
-        "legend": null
-      },
-      "value": "lightgray"
     }
   },
   "config": {}
