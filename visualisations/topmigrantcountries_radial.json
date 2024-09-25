@@ -11,9 +11,11 @@
       "name": "Year",
       "value": 2020,
       "bind": {
-        "input": "select",
-        "options": [2010, 2015, 2020],
-        "name": "Select Year: "
+        "input": "range",
+        "min": 2010,
+        "max": 2020,
+        "step": 5,
+        "name": "Change year: "
       }
     }
   ],
