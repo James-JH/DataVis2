@@ -3,7 +3,7 @@
   "width": "container",
   "height": 300,
   "config": {
-    "background": "blue"
+    "background": "deepskyblue"
   },
   "layer": [
     {
