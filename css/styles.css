@@ -11,11 +11,11 @@ h1 {
     font-size: 24px;
 }
 
-h2 {
+.page h2 {
     text-align: center;
 }
 
-p {
+.page p {
     text-align: center;
 }
 
