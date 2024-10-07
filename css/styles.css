@@ -19,6 +19,10 @@ h1 {
     text-align: center;
 }
 
+.page p {
+    text-align: center;
+}
+
 .page {
   width: 850px;
   background-color: white;
@@ -48,8 +52,12 @@ h1 {
   margin-bottom: 20px;
 }
 
+.pure-g p {
+  font-size: 8px;
+}
+
 .small-font {
-  font-size: 4px;
+  font-size: 8px;
 }
 
 footer {
