@@ -6,12 +6,17 @@ body {
 }
 
 h1 {
-    font-weight: 1900;
+    font-size: 30px;     
+    font-weight: 900;    
     text-align: center;
+    margin-top: 10px;
 }
 
-.description h2 {
+h2 {
+    font-size: 23px;      
+    font-weight: 600;
     text-align: center;
+    margin-top: 10px;
 }
 
 .page {
@@ -26,15 +31,10 @@ h1 {
   width: 100%;
 }
 
-.description h2,
-h1 {
-  margin-top:10px;
-}
-
 .page p {
-  font-size:14px;
-  text-align: center
-})
+  font-size: 14px;    
+  text-align: center;
+}
 
 .description-right {
   padding-left: 20px;
