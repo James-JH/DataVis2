@@ -32,14 +32,15 @@
             "field": "Median age (years)",
             "type": "quantitative",
             "scale": {"scheme": "blues",
-              "domain": [28, 40]
+              "domain": [32, 40],
+              "range": [0, 800]
               }
             },
           "color": {
           "field": "Median age (years)",
           "type": "quantitative",
           "scale": {"scheme": "lightgreyred",
-            "domain": [34, 40]
+            "domain": [28, 39]
             },
           "legend": {
             "title": "Median Age",
