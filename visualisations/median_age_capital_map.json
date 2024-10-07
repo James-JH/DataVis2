@@ -3,7 +3,7 @@
   "width": "container",
   "height": 300,
   "config": {
-    "background": "deepskyblue"
+    "background": "lightskyblue"
   },
   "layer": [
     {
@@ -13,7 +13,7 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "lightskyblue",
+        "fill": "deepskyblue",
         "stroke": "white",
         "strokeWidth": 1
       },
