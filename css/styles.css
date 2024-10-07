@@ -10,7 +10,7 @@ h1 {
 }
 
 .page {
-  width: 800px;
+  width: 850px;
   background-color: white;
   margin: auto;
   padding: 40px;
@@ -27,11 +27,11 @@ h1 {
 }
 
 .description-right {
-  padding-left: 10px;
+  padding-left: 15px;
 }
 
 .description-left {
-  padding-right: 10px;
+  padding-right: 15px;
 }
 
 .pure-g {
@@ -39,7 +39,7 @@ h1 {
 }
 
 .small-font {
-  font-size: 10px;
+  font-size: 8px;
 }
 
 footer {
