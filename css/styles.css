@@ -15,6 +15,10 @@ h2 {
     text-align: center;
 }
 
+p {
+    text-align: center;
+}
+
 .page {
   width: 850px;
   background-color: white;
