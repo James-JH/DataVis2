@@ -11,6 +11,10 @@ h1 {
     font-size: 24px;
 }
 
+h2 {
+    text-align: center;
+}
+
 .page {
   width: 850px;
   background-color: white;
