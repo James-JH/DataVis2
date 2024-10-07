@@ -3,7 +3,7 @@
   "width": "container",
   "height": 300,
   "config": {
-    "background": "#a6c8e5"
+    "background": "blue"
   },
   "layer": [
     {
