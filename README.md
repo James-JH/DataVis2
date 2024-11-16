@@ -1,6 +1,6 @@
 **Data Visualisation - Visualisation webpage project - 2024**
 
-Originally developed as part of a university project, this is now hosted on my private github for portfolio reasons.
+Originally developed as part of a university project, this is now hosted on my private github for portfolio reasons. Access the visualisation through this link: https://james-jh.github.io/DataVis2/
 
 By James Huynh
 
