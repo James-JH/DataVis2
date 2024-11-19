@@ -21,7 +21,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/jhuy0014/DataVis2/refs/heads/main/data/MedianAgeAndSexRatioByCapitalCity.csv",
+        "url": "https://raw.githubusercontent.com/James-JH/DataVis2/refs/heads/main/data/MedianAgeAndSexRatioByCapitalCity.csv",
         "format": {"type": "csv"}
       },
       "mark": "circle",
