@@ -8,7 +8,7 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/jhuy0014/DataVis2/refs/heads/main/data/au-states-topo.json",
+        "url": "https://raw.githubusercontent.com/James-JH/DataVis2/refs/heads/main/data/au-states-topo.json",
         "format": {"type": "topojson", "feature": "austates"}
       },
       "mark": {
