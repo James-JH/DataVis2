@@ -3,7 +3,7 @@
   "width": "container",
   "description": "A  radial chart with embedded data, option to choose the year.",
   "data": {
-    "url": "https://raw.githubusercontent.com/jhuy0014/DataVis2/refs/heads/main/data/TopCountriesBirth.csv",
+    "url": "https://raw.githubusercontent.com/James-JH/DataVis2/refs/heads/main/data/TopCountriesBirth.csv",
     "format": {"type": "csv"}
   },
   "params": [
